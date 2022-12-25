@@ -147,9 +147,74 @@ Among all the available classification methods, random forests provide the **hig
 -  This model process on **Threshold Technique**, so above the 0.5 is mention as 1 and below value is represent as 0.
        
        
-#Observation:-
+## Observation:-
 - **X_train and Y_train data** has been fitted in this four models to find out the low Overfitting model
-- **Logistic Regression Classifier** is the best accuracy scorer among the models.It has 82% of accuracy in train data and 77% of accuracy in test data.
+- **Logistic Regression Classifier** is the best model scorer among the models.It has 82% of accuracy in train data and 77% of accuracy in test data.
 - **RandomforestClassifier** gives the best accuracy score and Low Basis and low variance (low overfitting) among the models.So the RandomForestClassifier is used for the **Hyperparameter tuning**.
 - **KneighborsClassifier** and **RandomForest classifier** has the Low Basis and High variance(Overfitting).
+- The datas are unbalanced,so the Confusion matrix,Precision and Recall accuracy has been taken for accuracy prediction.
+       
+#### Confusion Matrix:
+It gives us a summary of correct and incorrect predictions broken down by each category. The summary is represented in a tabular form.
+   
+- From the test data prediction the confusion matrix shows that:
+       
+ <p align="center">
+  <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/209469817-3f1ecb0c-44e0-4f1b-9efc-17d81be0ea1f.png">
+</p>   
 
+#### Precision
+
+- Precision identifies the proportion of **correctly predicted positive outcome**. It is more concerned with the positive class than the negative class.
+
+**precision = TP / float(TP + FP)**
+
+#### Recall
+
+- Recall can be defined as the percentage of **correctly predicted positive outcomes out of all the actual positive outcomes**. Recall is also called Sensitivity.
+
+**recall = TP / float(TP + FN)**
+
+# Hyperparameters Tuning:
+Hyperparameters are parameters whose values control the learning process and determine the values of model parameters that a learning algorithm ends up learning and also used to find out the best model.
+
+- We will be using GridSearchCV in order to find the best values.
+
+- We will consider LogisticRegression as they have given best results
+
+**param_grid = {'penalty':['l1','l2'], 
+              'C':[1, 10, 100, 1000]}**
+       
+              
+**model=GridSearchCV(estimator =LogR, param_grid = param_grid,scoring = 'accuracy',cv = 5,verbose=0)**
+
+**model.fit(X_train,Y_train)**
+
+### Observation:
+After Hyperparameters tunnig the model score has been changed slightly from **82.1% to 82.6%**,so this model is best for predicting the unseen data.
+
+# Finally real data test submission:
+
+- Before applying the model,the real submission data was cleaned,unwanted features has been removed and categorical features are converted into numberical features.
+
+- **model.best_estimator** has been taken from the **Hyperparameter Tunning**
+
+- The new best model has trained by X_train and Y_train by fitting.
+- Predict the real submission file by new best model obtained by hyperparameter tunning.
+
+<p align="center">
+  <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/209470927-fda87bb8-64a8-4453-8c55-caf925fa9d34.png">
+</p>  
+
+# Conclusion
+
+**From the above problem statement the given test data has been predicted by using logistic Regression model. The hyperparameter tuning od GridSearchCV has been used to provide a best model**.
+
+
+ 
+
+              
+              
+    
+    
+ 
