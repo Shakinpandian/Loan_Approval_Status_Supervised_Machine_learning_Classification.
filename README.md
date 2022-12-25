@@ -79,4 +79,46 @@ I have used the Label / Ordinal encoding.
 **from sklearn.preprocessing import LabelEncoder**
 
 **Label=LabelEncoder()**
+
+**data_1["Fuel Type"]=Label.fit_transform(data_1["Fuel Type"])**
+
 - More than 5 features has been changed to Numerical features. 
+
+# 8.Separating train and test data:
+
+- The train-test split is used to estimate the performance of machine learning algorithms that are applicable for prediction-based Algorithms/Applications. This method is a fast and easy procedure to perform such that we can compare our own machine learning model results to machine results.
+
+**from sklearn.model_selection import train_test_split**
+
+**X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.3,random_state=45)**
+
+<p align="center">
+  <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/208979910-33a3af21-734b-4ef9-8cc3-b4c51efed7af.png">
+</p>
+
+- The dataset has been separated into 70% train data and 30% test data.
+
+
+# 9.Modeling the Train_data :-
+
+Define a baseline model:
+
+A baseline model is essentially a simple model that acts as a reference in a machine learning project. Its main function is to contextualize the results of trained models. Baseline models usually lack complexity and may have little predictive power.
+
+### i) KNeighborsClassifier Model
+
+<p align="center">
+  <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/209466406-12e21731-ce4f-4fe8-bed3-7191d0303bb3.png">
+</p>
+
+- k' in KNN is a parameter that refers to **the number of nearest neighbours to include in the majority of the voting process**.
+- KNN algorithm can be used for both classification and regression problems. 
+
+### ii) RandomForest Classifier
+
+<p align="center">
+  <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/209467144-9084dfb4-dc00-4955-b360-47395115a4c5.jpeg">
+</p>
+
+**Random forest classifier creates a set of decision trees from randomly selected subset of training set**. It then **aggregates the votes from different decision trees to decide the final class of the test object**.
+
