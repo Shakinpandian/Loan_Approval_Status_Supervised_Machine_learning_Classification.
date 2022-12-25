@@ -122,3 +122,34 @@ A baseline model is essentially a simple model that acts as a reference in a mac
 
 **Random forest classifier creates a set of decision trees from randomly selected subset of training set**. It then **aggregates the votes from different decision trees to decide the final class of the test object**.
 
+Among all the available classification methods, random forests provide the **highest accuracy** and it can automatically balance data sets when a class is more infrequent than other classes in the data.
+
+### iii) Support Vector Classifier
+
+<p align="center">
+  <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/209468133-ba33c306-7ebd-4761-99dd-27c3749963e6.png"
+</p>
+
+- SVM algorithm is to create the best line or decision boundary that can segregate n-dimensional space into classes so that we can easily put the new data point in the correct category in the future. This best decision boundary is called a **hyperplane**.
+
+- SVM chooses the extreme points/vectors that help in creating the hyperplane. These extreme cases are called as support vectors, and hence algorithm is termed as Support Vector Machine. 
+     
+- For a best margin, we can use a **kernel**,**Regularization** and **margin** as parameter.
+     
+### iv) LogisticRegression Classifier
+     
+  <p align="center">
+  <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/209468545-46153968-d5ef-44eb-8b7d-c495c2d53960.png"
+</p>
+   
+- Logistic Regression is used to predict categorical variables with the help of dependent variables. Consider there are two classes and a new data point is to be checked which class it would belong to. Then algorithms compute probability values that range from 0 and 1
+       
+-  This model process on **Threshold Technique**, so above the 0.5 is mention as 1 and below value is represent as 0.
+       
+       
+#Observation:-
+- **X_train and Y_train data** has been fitted in this four models to find out the low Overfitting model
+- **Logistic Regression Classifier** is the best accuracy scorer among the models.It has 82% of accuracy in train data and 77% of accuracy in test data.
+- **RandomforestClassifier** gives the best accuracy score and Low Basis and low variance (low overfitting) among the models.So the RandomForestClassifier is used for the **Hyperparameter tuning**.
+- **KneighborsClassifier** and **RandomForest classifier** has the Low Basis and High variance(Overfitting).
+
