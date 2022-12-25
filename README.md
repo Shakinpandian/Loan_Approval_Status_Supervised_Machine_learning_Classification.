@@ -53,3 +53,30 @@ The following libaries and tools are used in the project.
 |Credit_History|credit history meets guidelines|
 |Property_Area|Urban/ Semi Urban/ Rural|
 |Loan_Status(Target)| Loan approved (Y/N|
+
+- Total **7** Object datatype and **6** Numerical datatype are recorded.
+- The average Applicant Income and Loan Amount are **$5403.3** and **$146**.
+
+# 5. Data Visualization
+
+<p align="center">
+     <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/209465592-8636a407-e176-40b1-9509-18be70578592.jpg">
+</p>
+
+EDA is applied **to investigate the data and summarize the key insights**. It will give you the basic understanding of your data, it's distribution, null values and much more. You can either explore data using graphs or through some python functions.
+
+### Observation:-
+
+- From the categorical features, **Male** has the highest contribution for Loan aprroval duties.
+- Employees has the highest aspire than Self-employees and Semi urban has the huge contribution in Loan approval records.
+
+# 7. Data Postprocessing
+
+## Encoding Categorical Variable
+- Encoding is a technique of converting categorical variables into numerical values so that it could be easily fitted to a machine learning model.
+I have used the Label / Ordinal encoding.
+
+**from sklearn.preprocessing import LabelEncoder**
+
+**Label=LabelEncoder()**
+- More than 5 features has been changed to Numerical features. 
