@@ -203,7 +203,7 @@ After Hyperparameters tunnig the model score has been changed slightly from **82
 - Predict the real submission file by new best model obtained by hyperparameter tunning.
 
 <p align="center">
-  <img width="400" height="200" src="https://user-images.githubusercontent.com/119164734/209470927-fda87bb8-64a8-4453-8c55-caf925fa9d34.png">
+  <img width="400" height="600" src="https://user-images.githubusercontent.com/119164734/209470927-fda87bb8-64a8-4453-8c55-caf925fa9d34.png">
 </p>  
 
 # Conclusion
